@@ -1,3 +1,12 @@
 {
-    "image": "ghcr.io/schmidtdse/base:latest"
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/devcontainers/features/common-utils:2.5.2": {
+            "installSsh": true
+        }
+    }
 }
