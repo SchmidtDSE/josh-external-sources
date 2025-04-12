@@ -1,4 +1,4 @@
-name: climakitae
+name: base
 
 channels:
   - conda-forge
