@@ -1,5 +1,5 @@
 # Use a jupyter base image
-FROM quay.io/jupyter/minimal-notebook:ubuntu-24.04 AS base
+FROM quay.io/pangeo/pangeo-notebook AS base
 
 ## Grant user sudoer privileges
 USER root
