@@ -8,7 +8,9 @@ RUN conda install -y \
 
 # Install dependencies from conda-lock file into base environment
 COPY conda-linux-64.lock conda-linux-64.lock
-RUN conda-lock install --name base conda-linux-64.lock && \
+COPY environment.yml environment.yml
+RUN conda update --all --solver=classic -n base -c conda-forge conda && \
+    conda env update --file environment.yml && \
     conda clean -tipy
 
 # According to docs (https://github.com/cal-adapt/climakitae/wiki/Installing-climakitae-(1.2.2)-locally-using-conda-environment),
