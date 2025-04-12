@@ -8,7 +8,7 @@ RUN groupadd -f jovyan && \
     adduser ${NB_USER} sudo && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >>/etc/sudoers
 
-# Create directories with correct ownership
+# Create directories with correct ownership 
 RUN mkdir -p /opt/share /workspace && \
     chown -R ${NB_USER}:jovyan /opt/share /workspace
 
