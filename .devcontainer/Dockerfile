@@ -20,7 +20,7 @@ RUN conda run -n base pip install \
     xclim==0.54.0
 
 # Finally, pip install the repo itself at 1.2.2
-RUN pip install https://github.com/cal-adapt/climakitae/archive/refs/tags/1.2.2.zip
+RUN pip install https://github.com/cal-adapt/climakitae/archive/refs/tags/1.2.3.zip
 
 # Keep container alive
 CMD ["tail", "-f", "/dev/null"]
