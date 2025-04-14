@@ -1,5 +1,5 @@
 # Use a jupyter base image
-FROM quay.io/pangeo/pangeo-notebook AS base
+FROM quay.io/pangeo/base-image AS base
 
 # Install the conda lock into the base environment
 RUN conda install -y \
