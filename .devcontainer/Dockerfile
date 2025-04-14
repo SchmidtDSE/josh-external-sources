@@ -1,5 +1,5 @@
 # Use a jupyter base image
-FROM quay.io/jupyter/minimal-notebook:ubuntu-24.04 AS base
+FROM quay.io/pangeo/pangeo-notebook AS base
 
 ## Grant user sudoer privileges
 USER root
@@ -23,11 +23,6 @@ COPY environment.yml environment.yml
 RUN conda update --all --solver=classic -n base -c conda-forge conda && \
     conda env update --file environment.yml && \
     conda clean -tipy
-
-# Install pip dependencies into conda environment
-RUN conda run -n base pip install \
-    xarray==2024.11.0 \
-    xclim==0.54.0
 
 # Install the repo
 RUN pip install https://github.com/cal-adapt/climakitae/archive/refs/tags/1.2.3.zip
