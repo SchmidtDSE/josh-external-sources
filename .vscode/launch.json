@@ -8,6 +8,23 @@
       "program": "${workspaceFolder}/exploratory/download_caladapt.py",
       "console": "integratedTerminal",
       "justMyCode": true
+    },
+    {
+      "name": "Python: Run precipitation processing",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/exploratory/process_caladapt.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "args": [
+        "--county", "Riverside County",
+        "--simulation", "LOCA2_ACCESS-CM2_r2i1p1f1_historical+ssp245",
+        "--warming-level", "2.0",
+        "--output", "output/precip_riverside_annual_agg"
+      ]
     }
   ]
 }
