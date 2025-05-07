@@ -9,14 +9,17 @@ from climakitae.core.data_interface import (
     get_data
 )
 
-def process_precipitation_data(county, simulation_name, warming_level, output_path, generate_test_points=False, bbox=None):
+def process_climate_data(county, variable_name, simulation_name, warming_level, aggregation_method, 
+                         output_path, generate_test_points=False, bbox=None):
     """
-    Process precipitation data for a specific county, simulation, and warming level.
+    Process climate data for a specific variable, county, simulation, and warming level.
     
     Args:
         county (str): County name to fetch data for
+        variable_name (str): Climate variable to process (e.g., "Precipitation (total)", "Temperature (min)")
         simulation_name (str): Name of the simulation to select
         warming_level (float): Warming level to select
+        aggregation_method (str): Method to aggregate data by year ('sum', 'min', 'max', 'mean')
         output_path (str): Path where to save the output NetCDF file
         generate_test_points (bool): Whether to generate test points in CSV format
         bbox (tuple): Optional bounding box (min_lon, max_lon, min_lat, max_lat) to restrict test points
@@ -24,74 +27,97 @@ def process_precipitation_data(county, simulation_name, warming_level, output_pa
     Returns:
         The processed xarray dataset
     """
-    print(f"Downloading total precipitation data for {county}...")
+
+    print(f"Downloading {variable_name} data for {county}...")
+    
+    # Determine appropriate downscaling method and resolution based on variable
+    downscaling_method = "Statistical" # LOCA2 Hybrid
+    resolution = "3 km"
+    timescale = "monthly"
     
     # Get the raw data
-    precip_data = get_data(
-        variable = "Precipitation (total)", 
-        downscaling_method = "Statistical", 
-        resolution = "3 km", 
-        timescale = "monthly", 
+    climate_data = get_data(
+        variable = variable_name, 
+        downscaling_method = downscaling_method, 
+        resolution = resolution, 
+        timescale = timescale, 
         cached_area = county, 
         approach = "Warming Level"
     )
     
     # Select the specific simulation
-    precip_data_sim = precip_data.sel(simulation=simulation_name)
+    climate_data_sim = climate_data.sel(simulation=simulation_name)
     
     # Select specific warming level
-    precip_data_wl = precip_data_sim.sel(warming_level=warming_level)
+    climate_data_wl = climate_data_sim.sel(warming_level=warming_level)
     
     # Get the centered year value
-    centered_year = precip_data_wl.centered_year.item()
+    centered_year = climate_data_wl.centered_year.item()
     print(f"Centered year: {centered_year}")
     
     # Calculate calendar years from time_delta values
     # time_delta is in months, from -180 to 179 (30 years × 12 months)
     # First convert time_delta to year offset
-    year_offset = precip_data_wl.time_delta / 12
+    year_offset = climate_data_wl.time_delta / 12
     # Round down to get the year number relative to centered year
     year_offset = year_offset.astype(int)
     # Calculate actual calendar years
     calendar_years = centered_year + year_offset
     
     # Assign calendar years as a new coordinate
-    precip_data_wl = precip_data_wl.assign_coords(calendar_year=("time_delta", calendar_years.values))
+    climate_data_wl = climate_data_wl.assign_coords(calendar_year=("time_delta", calendar_years.values))
     
-    # Now we can group by calendar_year and sum
-    precip_annual = precip_data_wl.groupby("calendar_year").sum(dim="time_delta").astype(float)
+    # Group by calendar year and apply the appropriate aggregation method
+    if aggregation_method == 'sum':
+        annual_data = climate_data_wl.groupby("calendar_year").sum(dim="time_delta").astype(float)
+    elif aggregation_method == 'min':
+        annual_data = climate_data_wl.groupby("calendar_year").min(dim="time_delta").astype(float)
+    elif aggregation_method == 'max':
+        annual_data = climate_data_wl.groupby("calendar_year").max(dim="time_delta").astype(float)
+    elif aggregation_method == 'mean':
+        annual_data = climate_data_wl.groupby("calendar_year").mean(dim="time_delta").astype(float)
+    else:
+        raise ValueError(f"Unsupported aggregation method: {aggregation_method}")
     
     # Add metadata
-    precip_annual.attrs['centered_year'] = centered_year
-    precip_annual.attrs['warming_level'] = warming_level
-    precip_annual.attrs['simulation'] = simulation_name
+    annual_data.attrs['centered_year'] = centered_year
+    annual_data.attrs['warming_level'] = warming_level
+    annual_data.attrs['simulation'] = simulation_name
+    annual_data.attrs['variable'] = variable_name
+    annual_data.attrs['aggregation'] = aggregation_method
+    
+    # Check if output path already exists, if so, remove it
+    if os.path.exists(output_path):
+        print(f"Output path {output_path} already exists. Removing it.")
+        os.remove(output_path)
     
     # Export the result
-    ck.export(precip_annual, filename=output_path, format="NetCDF")
+    ck.export(annual_data, filename=output_path, format="NetCDF")
     
     # Generate test points if requested
     if generate_test_points:
-        generate_test_points_csv(precip_annual, output_path, bbox)
+        generate_test_points_csv(annual_data, variable_name, output_path, bbox)
     
-    return precip_annual
+    return annual_data
 
 
-def generate_test_points_csv(precip_annual, output_path, bbox=None):
+def generate_test_points_csv(annual_data, variable_name, output_path, bbox=None):
     """
-    Generate approximately 10 test points from the precipitation dataset
+    Generate approximately 10 test points from the climate dataset
     and save them as a CSV file for testing purposes.
     
     Args:
-        precip_annual: xarray DataArray with precipitation data
+        annual_data: xarray DataArray with climate data
+        variable_name: Name of the climate variable
         output_path: Base path for saving the CSV file
         bbox (tuple): Optional bounding box (min_lon, max_lon, min_lat, max_lat) to restrict test points
     """
     print("Generating test points for validation...")
     
     # Get available calendar years, latitudes, and longitudes
-    calendar_years = precip_annual.calendar_year.values
-    lats = precip_annual.lat.values
-    lons = precip_annual.lon.values
+    calendar_years = annual_data.calendar_year.values
+    lats = annual_data.lat.values
+    lons = annual_data.lon.values
     
     # Filter lats and lons if bounding box is provided
     if bbox:
@@ -123,13 +149,13 @@ def generate_test_points_csv(precip_annual, output_path, bbox=None):
     for year in selected_years:
         for lat in selected_lats:
             for lon in selected_lons:
-                # Get precipitation value for this point
-                value = float(precip_annual.sel(calendar_year=year, lat=lat, lon=lon, method='nearest').values)
+                # Get data value for this point
+                value = float(annual_data.sel(calendar_year=year, lat=lat, lon=lon, method='nearest').values)
                 test_points.append({
                     'calendar_year': int(year),
                     'lat': float(lat),
                     'lon': float(lon),
-                    'precipitation': value
+                    variable_name.replace(' ', '_').lower(): value
                 })
     
     # Convert to DataFrame and save as CSV
@@ -143,9 +169,13 @@ def generate_test_points_csv(precip_annual, output_path, bbox=None):
 
 def parse_arguments():
     """Parse command line arguments."""
-    parser = argparse.ArgumentParser(description='Process precipitation data from Cal-Adapt.')
+    parser = argparse.ArgumentParser(description='Process climate data from Cal-Adapt.')
     parser.add_argument('--county', type=str, required=True,
                         help='County name to fetch data for (e.g., "Riverside County")')
+    parser.add_argument('--variable', type=str, required=True,
+                        help='Climate variable to process (e.g., "Precipitation (total)", "Temperature (min)")')
+    parser.add_argument('--aggregation', type=str, choices=['sum', 'min', 'max', 'mean'], required=True,
+                        help='Method to aggregate data by year')
     parser.add_argument('--simulation', type=str, required=True,
                         help='Name of the simulation to select')
     parser.add_argument('--warming-level', type=float, required=True,
@@ -163,10 +193,12 @@ if __name__ == "__main__":
     args = parse_arguments()
     
     # Process data with command line arguments
-    processed_data = process_precipitation_data(
+    processed_data = process_climate_data(
         county=args.county,
+        variable_name=args.variable,
         simulation_name=args.simulation,
         warming_level=args.warming_level,
+        aggregation_method=args.aggregation,
         output_path=args.output,
         generate_test_points=args.generate_test_points,
         bbox=args.bbox

@@ -1,39 +1,46 @@
-import climakitae as ck 
-from climakitae.core.data_interface import (
-    get_data_options, 
-    get_subsetting_options, 
-    get_data
-)
+import argparse
+import os
+from process_caladapt import process_climate_data
 
-## Total Prcipitation for Riverside County
-print("Downloading total precipitation data for Riverside County...")
+def main():
+    # Define common parameters
+    SIMULATION = "LOCA2_ACCESS-CM2_r2i1p1f1_historical+ssp245"
+    WARMING_LEVEL = 2.0
+    
+    # Define combinations to process
+    combinations = [
+        ## Sum of precipitation
+        ("Riverside County", "Precipitation (total)", "sum", "precip_riverside_annual"),
+        ("San Bernardino County", "Precipitation (total)", "sum", "precip_sanbernardino_annual"),
 
-precip_riverside = get_data(
-    variable = "Precipitation (total)", 
-    downscaling_method = "Statistical", 
-    resolution = "3 km", 
-    timescale = "monthly", 
-    cached_area = "Riverside County", 
-    approach = "Warming Level"
-)
+        ## Maximum temperature of maximums
+        ("Riverside County", "Maximum air temperature at 2m", "max", "maxtemp_riverside_annual"),
+        ("San Bernardino County", "Maximum air temperature at 2m", "max", "maxtemp_sanbernardino_annual"),
 
-precip_riverside_annual = precip_riverside.sel(warming_level=2).sum(dim='time_delta').astype(float)
+        ## Minimum temperature of mininums
+        ("Riverside County", "Minimum air temperature at 2m", "min", "mintemp_riverside_annual"),
+        ("San Bernardino County", "Minimum air temperature at 2m", "min", "mintemp_sanbernardino_annual"),
 
-ck.export(precip_riverside_annual, filename="precip_riverside_annual", format="NetCDF") 
+        ## Mean temperature (of maximum, since we don't have mean directly)
+        ("Riverside County", "Maximum air temperature at 2m", "mean", "meantemp_riverside_annual"),
+        ("San Bernardino County", "Maximum air temperature at 2m", "mean", "meantemp_sanbernardino_annual"),
+    ]
+    
+    # Process all combinations
+    for county, variable, aggregation, output_base in combinations:
+        output_path = f"{output_base}.nc"
+        print(f"Processing {variable} for {county}...")
+        
+        process_climate_data(
+            county=county,
+            variable_name=variable,
+            simulation_name=SIMULATION,
+            warming_level=WARMING_LEVEL,
+            aggregation_method=aggregation,
+            output_path=output_path
+        )
+        
+        print(f"Data saved to {output_path}")
 
-## Total Precipitation for San Bernardino County
-print("Downloading total precipitation data for San Bernardino County...")
-
-precip_sanbernardino = get_data(
-    variable = "Precipitation (total)", 
-    downscaling_method = "Statistical", 
-    resolution = "3 km", 
-    timescale = "monthly", 
-    cached_area = "San Bernardino County", 
-    approach = "Warming Level"
-)
-
-precip_sanbernardino_annual = precip_sanbernardino.sel(warming_level=2).sum(dim='time_delta').astype(float)
-
-ck.export(precip_sanbernardino_annual, filename="precip_sanbernardino_annual", format="NetCDF")
-
+if __name__ == "__main__":
+    main()

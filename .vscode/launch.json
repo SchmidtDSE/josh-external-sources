@@ -23,7 +23,9 @@
         "--county", "Riverside County",
         "--simulation", "LOCA2_ACCESS-CM2_r2i1p1f1_historical+ssp245",
         "--warming-level", "2.0",
-        "--output", "output/precip_riverside_annual_agg"
+        "--output", "output/precip_riverside_annual_agg_windowed",
+        "--generate-test-points",
+        "--bbox", "-117.400", "-117.395", "33.900", "33.905"
       ]
     }
   ]
