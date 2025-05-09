@@ -5,3 +5,6 @@ data/
 
 # netcdf data
 *.nc
+
+# Test point csv
+*.csv
