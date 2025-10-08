@@ -7,8 +7,7 @@
         "ghcr.io/devcontainers/features/github-cli:1": {},
         "ghcr.io/devcontainers/features/common-utils:2.5.4": {
             "installSsh": true
-        },
-        "ghcr.io/gondeknp/devcontainer_jupyterhub_interoperator/jupyter-compat:latest": {}
+        }
     },
     "customizations": {
         "vscode": {

@@ -8,3 +8,5 @@ data/
 
 # Test point csv
 *.csv
+
+.claude
