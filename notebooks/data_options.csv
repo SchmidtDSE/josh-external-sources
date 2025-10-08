@@ -79,6 +79,8 @@ Statistical,SSP 5-8.5,monthly,Minimum air temperature at 2m,3 km
 Statistical,SSP 5-8.5,monthly,West-East component of Wind at 10m,3 km
 Statistical,SSP 5-8.5,monthly,North-South component of Wind at 10m,3 km
 Statistical,SSP 5-8.5,monthly,Wind speed at 10m,3 km
+Dynamical,Historical Climate,hourly,Fosberg fire weather index,3 km
+Dynamical,SSP 3-7.0,hourly,Fosberg fire weather index,3 km
 Dynamical,Historical Climate,hourly,Instantaneous downwelling clear sky longwave flux at bottom,45 km
 Dynamical,Historical Climate,hourly,Instantaneous downwelling clear sky longwave flux at bottom,9 km
 Dynamical,Historical Climate,hourly,Instantaneous downwelling clear sky longwave flux at bottom,3 km
@@ -106,15 +108,6 @@ Dynamical,Historical Climate,hourly,Precipitation (cumulus portion only),3 km
 Dynamical,Historical Climate,hourly,Precipitation (grid-scale portion only),45 km
 Dynamical,Historical Climate,hourly,Precipitation (grid-scale portion only),9 km
 Dynamical,Historical Climate,hourly,Precipitation (grid-scale portion only),3 km
-Dynamical,Historical Climate,hourly,Subsurface runoff,45 km
-Dynamical,Historical Climate,hourly,Subsurface runoff,9 km
-Dynamical,Historical Climate,hourly,Subsurface runoff,3 km
-Dynamical,Historical Climate,hourly,Surface runoff,45 km
-Dynamical,Historical Climate,hourly,Surface runoff,9 km
-Dynamical,Historical Climate,hourly,Surface runoff,3 km
-Dynamical,Historical Climate,hourly,Snow water equivalent,45 km
-Dynamical,Historical Climate,hourly,Snow water equivalent,9 km
-Dynamical,Historical Climate,hourly,Snow water equivalent,3 km
 Dynamical,Historical Climate,hourly,Snowfall (snow and ice),45 km
 Dynamical,Historical Climate,hourly,Snowfall (snow and ice),9 km
 Dynamical,Historical Climate,hourly,Snowfall (snow and ice),3 km
@@ -172,15 +165,6 @@ Dynamical,SSP 3-7.0,hourly,Precipitation (cumulus portion only),3 km
 Dynamical,SSP 3-7.0,hourly,Precipitation (grid-scale portion only),45 km
 Dynamical,SSP 3-7.0,hourly,Precipitation (grid-scale portion only),9 km
 Dynamical,SSP 3-7.0,hourly,Precipitation (grid-scale portion only),3 km
-Dynamical,SSP 3-7.0,hourly,Subsurface runoff,45 km
-Dynamical,SSP 3-7.0,hourly,Subsurface runoff,9 km
-Dynamical,SSP 3-7.0,hourly,Subsurface runoff,3 km
-Dynamical,SSP 3-7.0,hourly,Surface runoff,45 km
-Dynamical,SSP 3-7.0,hourly,Surface runoff,9 km
-Dynamical,SSP 3-7.0,hourly,Surface runoff,3 km
-Dynamical,SSP 3-7.0,hourly,Snow water equivalent,45 km
-Dynamical,SSP 3-7.0,hourly,Snow water equivalent,9 km
-Dynamical,SSP 3-7.0,hourly,Snow water equivalent,3 km
 Dynamical,SSP 3-7.0,hourly,Snowfall (snow and ice),45 km
 Dynamical,SSP 3-7.0,hourly,Snowfall (snow and ice),9 km
 Dynamical,SSP 3-7.0,hourly,Snowfall (snow and ice),3 km
@@ -211,9 +195,6 @@ Dynamical,SSP 3-7.0,hourly,West-East component of Wind at 10m,3 km
 Dynamical,SSP 3-7.0,hourly,North-South component of Wind at 10m,45 km
 Dynamical,SSP 3-7.0,hourly,North-South component of Wind at 10m,9 km
 Dynamical,SSP 3-7.0,hourly,North-South component of Wind at 10m,3 km
-Dynamical,Historical Climate,daily,Evapotranspiration,45 km
-Dynamical,Historical Climate,daily,Evapotranspiration,9 km
-Dynamical,Historical Climate,daily,Evapotranspiration,3 km
 Dynamical,Historical Climate,daily,Evaporation,45 km
 Dynamical,Historical Climate,daily,Evaporation,9 km
 Dynamical,Historical Climate,daily,Evaporation,3 km
@@ -235,8 +216,6 @@ Dynamical,Historical Climate,daily,Liquid water path,3 km
 Dynamical,Historical Climate,daily,Longwave flux at the surface,45 km
 Dynamical,Historical Climate,daily,Longwave flux at the surface,9 km
 Dynamical,Historical Climate,daily,Longwave flux at the surface,3 km
-Dynamical,Historical Climate,daily,Precipitation (convective only),45 km
-Dynamical,Historical Climate,daily,Precipitation (convective only),9 km
 Dynamical,Historical Climate,daily,Precipitation (total),45 km
 Dynamical,Historical Climate,daily,Precipitation (total),9 km
 Dynamical,Historical Climate,daily,Precipitation (total),3 km
@@ -255,18 +234,9 @@ Dynamical,Historical Climate,daily,Specific humidity at 2m,3 km
 Dynamical,Historical Climate,daily,Relative humidity,45 km
 Dynamical,Historical Climate,daily,Relative humidity,9 km
 Dynamical,Historical Climate,daily,Relative humidity,3 km
-Dynamical,Historical Climate,daily,Surface runoff,45 km
-Dynamical,Historical Climate,daily,Surface runoff,9 km
-Dynamical,Historical Climate,daily,Surface runoff,3 km
 Dynamical,Historical Climate,daily,Sensible heat flux at the surface,45 km
 Dynamical,Historical Climate,daily,Sensible heat flux at the surface,9 km
 Dynamical,Historical Climate,daily,Sensible heat flux at the surface,3 km
-Dynamical,Historical Climate,daily,Snow water equivalent,45 km
-Dynamical,Historical Climate,daily,Snow water equivalent,9 km
-Dynamical,Historical Climate,daily,Snow water equivalent,3 km
-Dynamical,Historical Climate,daily,Subsurface runoff,45 km
-Dynamical,Historical Climate,daily,Subsurface runoff,9 km
-Dynamical,Historical Climate,daily,Subsurface runoff,3 km
 Dynamical,Historical Climate,daily,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,Historical Climate,daily,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,Historical Climate,daily,Instantaneous downwelling shortwave flux at bottom,3 km
@@ -291,9 +261,6 @@ Dynamical,Historical Climate,daily,Maximum wind speed at 10m,3 km
 Dynamical,Historical Climate,daily,Mean wind speed at 10m,45 km
 Dynamical,Historical Climate,daily,Mean wind speed at 10m,9 km
 Dynamical,Historical Climate,daily,Mean wind speed at 10m,3 km
-Dynamical,Historical Climate,monthly,Evapotranspiration,45 km
-Dynamical,Historical Climate,monthly,Evapotranspiration,9 km
-Dynamical,Historical Climate,monthly,Evapotranspiration,3 km
 Dynamical,Historical Climate,monthly,Evaporation,45 km
 Dynamical,Historical Climate,monthly,Evaporation,9 km
 Dynamical,Historical Climate,monthly,Evaporation,3 km
@@ -315,8 +282,6 @@ Dynamical,Historical Climate,monthly,Liquid water path,3 km
 Dynamical,Historical Climate,monthly,Longwave flux at the surface,45 km
 Dynamical,Historical Climate,monthly,Longwave flux at the surface,9 km
 Dynamical,Historical Climate,monthly,Longwave flux at the surface,3 km
-Dynamical,Historical Climate,monthly,Precipitation (convective only),45 km
-Dynamical,Historical Climate,monthly,Precipitation (convective only),9 km
 Dynamical,Historical Climate,monthly,Precipitation (total),45 km
 Dynamical,Historical Climate,monthly,Precipitation (total),9 km
 Dynamical,Historical Climate,monthly,Precipitation (total),3 km
@@ -335,18 +300,9 @@ Dynamical,Historical Climate,monthly,Specific humidity at 2m,3 km
 Dynamical,Historical Climate,monthly,Relative humidity,45 km
 Dynamical,Historical Climate,monthly,Relative humidity,9 km
 Dynamical,Historical Climate,monthly,Relative humidity,3 km
-Dynamical,Historical Climate,monthly,Surface runoff,45 km
-Dynamical,Historical Climate,monthly,Surface runoff,9 km
-Dynamical,Historical Climate,monthly,Surface runoff,3 km
 Dynamical,Historical Climate,monthly,Sensible heat flux at the surface,45 km
 Dynamical,Historical Climate,monthly,Sensible heat flux at the surface,9 km
 Dynamical,Historical Climate,monthly,Sensible heat flux at the surface,3 km
-Dynamical,Historical Climate,monthly,Snow water equivalent,45 km
-Dynamical,Historical Climate,monthly,Snow water equivalent,9 km
-Dynamical,Historical Climate,monthly,Snow water equivalent,3 km
-Dynamical,Historical Climate,monthly,Subsurface runoff,45 km
-Dynamical,Historical Climate,monthly,Subsurface runoff,9 km
-Dynamical,Historical Climate,monthly,Subsurface runoff,3 km
 Dynamical,Historical Climate,monthly,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,Historical Climate,monthly,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,Historical Climate,monthly,Instantaneous downwelling shortwave flux at bottom,3 km
@@ -389,12 +345,6 @@ Dynamical,SSP 2-4.5,hourly,Precipitation (cumulus portion only),45 km
 Dynamical,SSP 2-4.5,hourly,Precipitation (cumulus portion only),9 km
 Dynamical,SSP 2-4.5,hourly,Precipitation (grid-scale portion only),45 km
 Dynamical,SSP 2-4.5,hourly,Precipitation (grid-scale portion only),9 km
-Dynamical,SSP 2-4.5,hourly,Subsurface runoff,45 km
-Dynamical,SSP 2-4.5,hourly,Subsurface runoff,9 km
-Dynamical,SSP 2-4.5,hourly,Surface runoff,45 km
-Dynamical,SSP 2-4.5,hourly,Surface runoff,9 km
-Dynamical,SSP 2-4.5,hourly,Snow water equivalent,45 km
-Dynamical,SSP 2-4.5,hourly,Snow water equivalent,9 km
 Dynamical,SSP 2-4.5,hourly,Snowfall (snow and ice),45 km
 Dynamical,SSP 2-4.5,hourly,Snowfall (snow and ice),9 km
 Dynamical,SSP 2-4.5,hourly,Shortwave surface downward diffuse irradiance,45 km
@@ -415,8 +365,6 @@ Dynamical,SSP 2-4.5,hourly,West-East component of Wind at 10m,45 km
 Dynamical,SSP 2-4.5,hourly,West-East component of Wind at 10m,9 km
 Dynamical,SSP 2-4.5,hourly,North-South component of Wind at 10m,45 km
 Dynamical,SSP 2-4.5,hourly,North-South component of Wind at 10m,9 km
-Dynamical,SSP 2-4.5,daily,Evapotranspiration,45 km
-Dynamical,SSP 2-4.5,daily,Evapotranspiration,9 km
 Dynamical,SSP 2-4.5,daily,Evaporation,45 km
 Dynamical,SSP 2-4.5,daily,Evaporation,9 km
 Dynamical,SSP 2-4.5,daily,Ground heat flux,45 km
@@ -431,8 +379,6 @@ Dynamical,SSP 2-4.5,daily,Liquid water path,45 km
 Dynamical,SSP 2-4.5,daily,Liquid water path,9 km
 Dynamical,SSP 2-4.5,daily,Longwave flux at the surface,45 km
 Dynamical,SSP 2-4.5,daily,Longwave flux at the surface,9 km
-Dynamical,SSP 2-4.5,daily,Precipitation (convective only),45 km
-Dynamical,SSP 2-4.5,daily,Precipitation (convective only),9 km
 Dynamical,SSP 2-4.5,daily,Precipitation (total),45 km
 Dynamical,SSP 2-4.5,daily,Precipitation (total),9 km
 Dynamical,SSP 2-4.5,daily,Maximum precipitation,45 km
@@ -445,14 +391,8 @@ Dynamical,SSP 2-4.5,daily,Specific humidity at 2m,45 km
 Dynamical,SSP 2-4.5,daily,Specific humidity at 2m,9 km
 Dynamical,SSP 2-4.5,daily,Relative humidity,45 km
 Dynamical,SSP 2-4.5,daily,Relative humidity,9 km
-Dynamical,SSP 2-4.5,daily,Surface runoff,45 km
-Dynamical,SSP 2-4.5,daily,Surface runoff,9 km
 Dynamical,SSP 2-4.5,daily,Sensible heat flux at the surface,45 km
 Dynamical,SSP 2-4.5,daily,Sensible heat flux at the surface,9 km
-Dynamical,SSP 2-4.5,daily,Snow water equivalent,45 km
-Dynamical,SSP 2-4.5,daily,Snow water equivalent,9 km
-Dynamical,SSP 2-4.5,daily,Subsurface runoff,45 km
-Dynamical,SSP 2-4.5,daily,Subsurface runoff,9 km
 Dynamical,SSP 2-4.5,daily,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,SSP 2-4.5,daily,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,SSP 2-4.5,daily,Shortwave flux at the surface,45 km
@@ -469,8 +409,6 @@ Dynamical,SSP 2-4.5,daily,Maximum wind speed at 10m,45 km
 Dynamical,SSP 2-4.5,daily,Maximum wind speed at 10m,9 km
 Dynamical,SSP 2-4.5,daily,Mean wind speed at 10m,45 km
 Dynamical,SSP 2-4.5,daily,Mean wind speed at 10m,9 km
-Dynamical,SSP 2-4.5,monthly,Evapotranspiration,45 km
-Dynamical,SSP 2-4.5,monthly,Evapotranspiration,9 km
 Dynamical,SSP 2-4.5,monthly,Evaporation,45 km
 Dynamical,SSP 2-4.5,monthly,Evaporation,9 km
 Dynamical,SSP 2-4.5,monthly,Ground heat flux,45 km
@@ -485,8 +423,6 @@ Dynamical,SSP 2-4.5,monthly,Liquid water path,45 km
 Dynamical,SSP 2-4.5,monthly,Liquid water path,9 km
 Dynamical,SSP 2-4.5,monthly,Longwave flux at the surface,45 km
 Dynamical,SSP 2-4.5,monthly,Longwave flux at the surface,9 km
-Dynamical,SSP 2-4.5,monthly,Precipitation (convective only),45 km
-Dynamical,SSP 2-4.5,monthly,Precipitation (convective only),9 km
 Dynamical,SSP 2-4.5,monthly,Precipitation (total),45 km
 Dynamical,SSP 2-4.5,monthly,Precipitation (total),9 km
 Dynamical,SSP 2-4.5,monthly,Maximum precipitation,45 km
@@ -499,14 +435,8 @@ Dynamical,SSP 2-4.5,monthly,Specific humidity at 2m,45 km
 Dynamical,SSP 2-4.5,monthly,Specific humidity at 2m,9 km
 Dynamical,SSP 2-4.5,monthly,Relative humidity,45 km
 Dynamical,SSP 2-4.5,monthly,Relative humidity,9 km
-Dynamical,SSP 2-4.5,monthly,Surface runoff,45 km
-Dynamical,SSP 2-4.5,monthly,Surface runoff,9 km
 Dynamical,SSP 2-4.5,monthly,Sensible heat flux at the surface,45 km
 Dynamical,SSP 2-4.5,monthly,Sensible heat flux at the surface,9 km
-Dynamical,SSP 2-4.5,monthly,Snow water equivalent,45 km
-Dynamical,SSP 2-4.5,monthly,Snow water equivalent,9 km
-Dynamical,SSP 2-4.5,monthly,Subsurface runoff,45 km
-Dynamical,SSP 2-4.5,monthly,Subsurface runoff,9 km
 Dynamical,SSP 2-4.5,monthly,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,SSP 2-4.5,monthly,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,SSP 2-4.5,monthly,Shortwave flux at the surface,45 km
@@ -523,9 +453,6 @@ Dynamical,SSP 2-4.5,monthly,Maximum wind speed at 10m,45 km
 Dynamical,SSP 2-4.5,monthly,Maximum wind speed at 10m,9 km
 Dynamical,SSP 2-4.5,monthly,Mean wind speed at 10m,45 km
 Dynamical,SSP 2-4.5,monthly,Mean wind speed at 10m,9 km
-Dynamical,SSP 3-7.0,daily,Evapotranspiration,45 km
-Dynamical,SSP 3-7.0,daily,Evapotranspiration,9 km
-Dynamical,SSP 3-7.0,daily,Evapotranspiration,3 km
 Dynamical,SSP 3-7.0,daily,Evaporation,45 km
 Dynamical,SSP 3-7.0,daily,Evaporation,9 km
 Dynamical,SSP 3-7.0,daily,Evaporation,3 km
@@ -547,8 +474,6 @@ Dynamical,SSP 3-7.0,daily,Liquid water path,3 km
 Dynamical,SSP 3-7.0,daily,Longwave flux at the surface,45 km
 Dynamical,SSP 3-7.0,daily,Longwave flux at the surface,9 km
 Dynamical,SSP 3-7.0,daily,Longwave flux at the surface,3 km
-Dynamical,SSP 3-7.0,daily,Precipitation (convective only),45 km
-Dynamical,SSP 3-7.0,daily,Precipitation (convective only),9 km
 Dynamical,SSP 3-7.0,daily,Precipitation (total),45 km
 Dynamical,SSP 3-7.0,daily,Precipitation (total),9 km
 Dynamical,SSP 3-7.0,daily,Precipitation (total),3 km
@@ -567,18 +492,9 @@ Dynamical,SSP 3-7.0,daily,Specific humidity at 2m,3 km
 Dynamical,SSP 3-7.0,daily,Relative humidity,45 km
 Dynamical,SSP 3-7.0,daily,Relative humidity,9 km
 Dynamical,SSP 3-7.0,daily,Relative humidity,3 km
-Dynamical,SSP 3-7.0,daily,Surface runoff,45 km
-Dynamical,SSP 3-7.0,daily,Surface runoff,9 km
-Dynamical,SSP 3-7.0,daily,Surface runoff,3 km
 Dynamical,SSP 3-7.0,daily,Sensible heat flux at the surface,45 km
 Dynamical,SSP 3-7.0,daily,Sensible heat flux at the surface,9 km
 Dynamical,SSP 3-7.0,daily,Sensible heat flux at the surface,3 km
-Dynamical,SSP 3-7.0,daily,Snow water equivalent,45 km
-Dynamical,SSP 3-7.0,daily,Snow water equivalent,9 km
-Dynamical,SSP 3-7.0,daily,Snow water equivalent,3 km
-Dynamical,SSP 3-7.0,daily,Subsurface runoff,45 km
-Dynamical,SSP 3-7.0,daily,Subsurface runoff,9 km
-Dynamical,SSP 3-7.0,daily,Subsurface runoff,3 km
 Dynamical,SSP 3-7.0,daily,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,SSP 3-7.0,daily,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,SSP 3-7.0,daily,Instantaneous downwelling shortwave flux at bottom,3 km
@@ -603,9 +519,6 @@ Dynamical,SSP 3-7.0,daily,Maximum wind speed at 10m,3 km
 Dynamical,SSP 3-7.0,daily,Mean wind speed at 10m,45 km
 Dynamical,SSP 3-7.0,daily,Mean wind speed at 10m,9 km
 Dynamical,SSP 3-7.0,daily,Mean wind speed at 10m,3 km
-Dynamical,SSP 3-7.0,monthly,Evapotranspiration,45 km
-Dynamical,SSP 3-7.0,monthly,Evapotranspiration,9 km
-Dynamical,SSP 3-7.0,monthly,Evapotranspiration,3 km
 Dynamical,SSP 3-7.0,monthly,Evaporation,45 km
 Dynamical,SSP 3-7.0,monthly,Evaporation,9 km
 Dynamical,SSP 3-7.0,monthly,Evaporation,3 km
@@ -627,8 +540,6 @@ Dynamical,SSP 3-7.0,monthly,Liquid water path,3 km
 Dynamical,SSP 3-7.0,monthly,Longwave flux at the surface,45 km
 Dynamical,SSP 3-7.0,monthly,Longwave flux at the surface,9 km
 Dynamical,SSP 3-7.0,monthly,Longwave flux at the surface,3 km
-Dynamical,SSP 3-7.0,monthly,Precipitation (convective only),45 km
-Dynamical,SSP 3-7.0,monthly,Precipitation (convective only),9 km
 Dynamical,SSP 3-7.0,monthly,Precipitation (total),45 km
 Dynamical,SSP 3-7.0,monthly,Precipitation (total),9 km
 Dynamical,SSP 3-7.0,monthly,Precipitation (total),3 km
@@ -647,18 +558,9 @@ Dynamical,SSP 3-7.0,monthly,Specific humidity at 2m,3 km
 Dynamical,SSP 3-7.0,monthly,Relative humidity,45 km
 Dynamical,SSP 3-7.0,monthly,Relative humidity,9 km
 Dynamical,SSP 3-7.0,monthly,Relative humidity,3 km
-Dynamical,SSP 3-7.0,monthly,Surface runoff,45 km
-Dynamical,SSP 3-7.0,monthly,Surface runoff,9 km
-Dynamical,SSP 3-7.0,monthly,Surface runoff,3 km
 Dynamical,SSP 3-7.0,monthly,Sensible heat flux at the surface,45 km
 Dynamical,SSP 3-7.0,monthly,Sensible heat flux at the surface,9 km
 Dynamical,SSP 3-7.0,monthly,Sensible heat flux at the surface,3 km
-Dynamical,SSP 3-7.0,monthly,Snow water equivalent,45 km
-Dynamical,SSP 3-7.0,monthly,Snow water equivalent,9 km
-Dynamical,SSP 3-7.0,monthly,Snow water equivalent,3 km
-Dynamical,SSP 3-7.0,monthly,Subsurface runoff,45 km
-Dynamical,SSP 3-7.0,monthly,Subsurface runoff,9 km
-Dynamical,SSP 3-7.0,monthly,Subsurface runoff,3 km
 Dynamical,SSP 3-7.0,monthly,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,SSP 3-7.0,monthly,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,SSP 3-7.0,monthly,Instantaneous downwelling shortwave flux at bottom,3 km
@@ -701,12 +603,6 @@ Dynamical,SSP 5-8.5,hourly,Precipitation (cumulus portion only),45 km
 Dynamical,SSP 5-8.5,hourly,Precipitation (cumulus portion only),9 km
 Dynamical,SSP 5-8.5,hourly,Precipitation (grid-scale portion only),45 km
 Dynamical,SSP 5-8.5,hourly,Precipitation (grid-scale portion only),9 km
-Dynamical,SSP 5-8.5,hourly,Subsurface runoff,45 km
-Dynamical,SSP 5-8.5,hourly,Subsurface runoff,9 km
-Dynamical,SSP 5-8.5,hourly,Surface runoff,45 km
-Dynamical,SSP 5-8.5,hourly,Surface runoff,9 km
-Dynamical,SSP 5-8.5,hourly,Snow water equivalent,45 km
-Dynamical,SSP 5-8.5,hourly,Snow water equivalent,9 km
 Dynamical,SSP 5-8.5,hourly,Snowfall (snow and ice),45 km
 Dynamical,SSP 5-8.5,hourly,Snowfall (snow and ice),9 km
 Dynamical,SSP 5-8.5,hourly,Shortwave surface downward diffuse irradiance,45 km
@@ -727,8 +623,6 @@ Dynamical,SSP 5-8.5,hourly,West-East component of Wind at 10m,45 km
 Dynamical,SSP 5-8.5,hourly,West-East component of Wind at 10m,9 km
 Dynamical,SSP 5-8.5,hourly,North-South component of Wind at 10m,45 km
 Dynamical,SSP 5-8.5,hourly,North-South component of Wind at 10m,9 km
-Dynamical,SSP 5-8.5,daily,Evapotranspiration,45 km
-Dynamical,SSP 5-8.5,daily,Evapotranspiration,9 km
 Dynamical,SSP 5-8.5,daily,Evaporation,45 km
 Dynamical,SSP 5-8.5,daily,Evaporation,9 km
 Dynamical,SSP 5-8.5,daily,Ground heat flux,45 km
@@ -743,8 +637,6 @@ Dynamical,SSP 5-8.5,daily,Liquid water path,45 km
 Dynamical,SSP 5-8.5,daily,Liquid water path,9 km
 Dynamical,SSP 5-8.5,daily,Longwave flux at the surface,45 km
 Dynamical,SSP 5-8.5,daily,Longwave flux at the surface,9 km
-Dynamical,SSP 5-8.5,daily,Precipitation (convective only),45 km
-Dynamical,SSP 5-8.5,daily,Precipitation (convective only),9 km
 Dynamical,SSP 5-8.5,daily,Precipitation (total),45 km
 Dynamical,SSP 5-8.5,daily,Precipitation (total),9 km
 Dynamical,SSP 5-8.5,daily,Maximum precipitation,45 km
@@ -757,14 +649,8 @@ Dynamical,SSP 5-8.5,daily,Specific humidity at 2m,45 km
 Dynamical,SSP 5-8.5,daily,Specific humidity at 2m,9 km
 Dynamical,SSP 5-8.5,daily,Relative humidity,45 km
 Dynamical,SSP 5-8.5,daily,Relative humidity,9 km
-Dynamical,SSP 5-8.5,daily,Surface runoff,45 km
-Dynamical,SSP 5-8.5,daily,Surface runoff,9 km
 Dynamical,SSP 5-8.5,daily,Sensible heat flux at the surface,45 km
 Dynamical,SSP 5-8.5,daily,Sensible heat flux at the surface,9 km
-Dynamical,SSP 5-8.5,daily,Snow water equivalent,45 km
-Dynamical,SSP 5-8.5,daily,Snow water equivalent,9 km
-Dynamical,SSP 5-8.5,daily,Subsurface runoff,45 km
-Dynamical,SSP 5-8.5,daily,Subsurface runoff,9 km
 Dynamical,SSP 5-8.5,daily,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,SSP 5-8.5,daily,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,SSP 5-8.5,daily,Shortwave flux at the surface,45 km
@@ -781,8 +667,6 @@ Dynamical,SSP 5-8.5,daily,Maximum wind speed at 10m,45 km
 Dynamical,SSP 5-8.5,daily,Maximum wind speed at 10m,9 km
 Dynamical,SSP 5-8.5,daily,Mean wind speed at 10m,45 km
 Dynamical,SSP 5-8.5,daily,Mean wind speed at 10m,9 km
-Dynamical,SSP 5-8.5,monthly,Evapotranspiration,45 km
-Dynamical,SSP 5-8.5,monthly,Evapotranspiration,9 km
 Dynamical,SSP 5-8.5,monthly,Evaporation,45 km
 Dynamical,SSP 5-8.5,monthly,Evaporation,9 km
 Dynamical,SSP 5-8.5,monthly,Ground heat flux,45 km
@@ -797,8 +681,6 @@ Dynamical,SSP 5-8.5,monthly,Liquid water path,45 km
 Dynamical,SSP 5-8.5,monthly,Liquid water path,9 km
 Dynamical,SSP 5-8.5,monthly,Longwave flux at the surface,45 km
 Dynamical,SSP 5-8.5,monthly,Longwave flux at the surface,9 km
-Dynamical,SSP 5-8.5,monthly,Precipitation (convective only),45 km
-Dynamical,SSP 5-8.5,monthly,Precipitation (convective only),9 km
 Dynamical,SSP 5-8.5,monthly,Precipitation (total),45 km
 Dynamical,SSP 5-8.5,monthly,Precipitation (total),9 km
 Dynamical,SSP 5-8.5,monthly,Maximum precipitation,45 km
@@ -811,14 +693,8 @@ Dynamical,SSP 5-8.5,monthly,Specific humidity at 2m,45 km
 Dynamical,SSP 5-8.5,monthly,Specific humidity at 2m,9 km
 Dynamical,SSP 5-8.5,monthly,Relative humidity,45 km
 Dynamical,SSP 5-8.5,monthly,Relative humidity,9 km
-Dynamical,SSP 5-8.5,monthly,Surface runoff,45 km
-Dynamical,SSP 5-8.5,monthly,Surface runoff,9 km
 Dynamical,SSP 5-8.5,monthly,Sensible heat flux at the surface,45 km
 Dynamical,SSP 5-8.5,monthly,Sensible heat flux at the surface,9 km
-Dynamical,SSP 5-8.5,monthly,Snow water equivalent,45 km
-Dynamical,SSP 5-8.5,monthly,Snow water equivalent,9 km
-Dynamical,SSP 5-8.5,monthly,Subsurface runoff,45 km
-Dynamical,SSP 5-8.5,monthly,Subsurface runoff,9 km
 Dynamical,SSP 5-8.5,monthly,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,SSP 5-8.5,monthly,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,SSP 5-8.5,monthly,Shortwave flux at the surface,45 km
@@ -835,10 +711,6 @@ Dynamical,SSP 5-8.5,monthly,Maximum wind speed at 10m,45 km
 Dynamical,SSP 5-8.5,monthly,Maximum wind speed at 10m,9 km
 Dynamical,SSP 5-8.5,monthly,Mean wind speed at 10m,45 km
 Dynamical,SSP 5-8.5,monthly,Mean wind speed at 10m,9 km
-Dynamical,Historical Climate,daily,Precipitation (convective only),3 km
-Dynamical,Historical Climate,monthly,Precipitation (convective only),3 km
-Dynamical,SSP 3-7.0,daily,Precipitation (convective only),3 km
-Dynamical,SSP 3-7.0,monthly,Precipitation (convective only),3 km
 Dynamical,Historical Climate,hourly,Shortwave surface downward direct irradiance,45 km
 Dynamical,Historical Climate,hourly,Shortwave surface downward direct irradiance,9 km
 Dynamical,Historical Climate,hourly,Shortwave surface downward direct irradiance,3 km
@@ -878,15 +750,6 @@ Dynamical,Historical Reconstruction,hourly,Precipitation (cumulus portion only),
 Dynamical,Historical Reconstruction,hourly,Precipitation (grid-scale portion only),45 km
 Dynamical,Historical Reconstruction,hourly,Precipitation (grid-scale portion only),9 km
 Dynamical,Historical Reconstruction,hourly,Precipitation (grid-scale portion only),3 km
-Dynamical,Historical Reconstruction,hourly,Subsurface runoff,45 km
-Dynamical,Historical Reconstruction,hourly,Subsurface runoff,9 km
-Dynamical,Historical Reconstruction,hourly,Subsurface runoff,3 km
-Dynamical,Historical Reconstruction,hourly,Surface runoff,45 km
-Dynamical,Historical Reconstruction,hourly,Surface runoff,9 km
-Dynamical,Historical Reconstruction,hourly,Surface runoff,3 km
-Dynamical,Historical Reconstruction,hourly,Snow water equivalent,45 km
-Dynamical,Historical Reconstruction,hourly,Snow water equivalent,9 km
-Dynamical,Historical Reconstruction,hourly,Snow water equivalent,3 km
 Dynamical,Historical Reconstruction,hourly,Snowfall (snow and ice),45 km
 Dynamical,Historical Reconstruction,hourly,Snowfall (snow and ice),9 km
 Dynamical,Historical Reconstruction,hourly,Snowfall (snow and ice),3 km
@@ -923,9 +786,6 @@ Dynamical,Historical Reconstruction,hourly,West-East component of Wind at 10m,3 
 Dynamical,Historical Reconstruction,hourly,North-South component of Wind at 10m,45 km
 Dynamical,Historical Reconstruction,hourly,North-South component of Wind at 10m,9 km
 Dynamical,Historical Reconstruction,hourly,North-South component of Wind at 10m,3 km
-Dynamical,Historical Reconstruction,daily,Evapotranspiration,45 km
-Dynamical,Historical Reconstruction,daily,Evapotranspiration,9 km
-Dynamical,Historical Reconstruction,daily,Evapotranspiration,3 km
 Dynamical,Historical Reconstruction,daily,Evaporation,45 km
 Dynamical,Historical Reconstruction,daily,Evaporation,9 km
 Dynamical,Historical Reconstruction,daily,Evaporation,3 km
@@ -947,9 +807,6 @@ Dynamical,Historical Reconstruction,daily,Liquid water path,3 km
 Dynamical,Historical Reconstruction,daily,Longwave flux at the surface,45 km
 Dynamical,Historical Reconstruction,daily,Longwave flux at the surface,9 km
 Dynamical,Historical Reconstruction,daily,Longwave flux at the surface,3 km
-Dynamical,Historical Reconstruction,daily,Precipitation (convective only),45 km
-Dynamical,Historical Reconstruction,daily,Precipitation (convective only),9 km
-Dynamical,Historical Reconstruction,daily,Precipitation (convective only),3 km
 Dynamical,Historical Reconstruction,daily,Precipitation (total),45 km
 Dynamical,Historical Reconstruction,daily,Precipitation (total),9 km
 Dynamical,Historical Reconstruction,daily,Precipitation (total),3 km
@@ -968,18 +825,9 @@ Dynamical,Historical Reconstruction,daily,Specific humidity at 2m,3 km
 Dynamical,Historical Reconstruction,daily,Relative humidity,45 km
 Dynamical,Historical Reconstruction,daily,Relative humidity,9 km
 Dynamical,Historical Reconstruction,daily,Relative humidity,3 km
-Dynamical,Historical Reconstruction,daily,Surface runoff,45 km
-Dynamical,Historical Reconstruction,daily,Surface runoff,9 km
-Dynamical,Historical Reconstruction,daily,Surface runoff,3 km
 Dynamical,Historical Reconstruction,daily,Sensible heat flux at the surface,45 km
 Dynamical,Historical Reconstruction,daily,Sensible heat flux at the surface,9 km
 Dynamical,Historical Reconstruction,daily,Sensible heat flux at the surface,3 km
-Dynamical,Historical Reconstruction,daily,Snow water equivalent,45 km
-Dynamical,Historical Reconstruction,daily,Snow water equivalent,9 km
-Dynamical,Historical Reconstruction,daily,Snow water equivalent,3 km
-Dynamical,Historical Reconstruction,daily,Subsurface runoff,45 km
-Dynamical,Historical Reconstruction,daily,Subsurface runoff,9 km
-Dynamical,Historical Reconstruction,daily,Subsurface runoff,3 km
 Dynamical,Historical Reconstruction,daily,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,Historical Reconstruction,daily,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,Historical Reconstruction,daily,Instantaneous downwelling shortwave flux at bottom,3 km
@@ -1004,9 +852,6 @@ Dynamical,Historical Reconstruction,daily,Maximum wind speed at 10m,3 km
 Dynamical,Historical Reconstruction,daily,Mean wind speed at 10m,45 km
 Dynamical,Historical Reconstruction,daily,Mean wind speed at 10m,9 km
 Dynamical,Historical Reconstruction,daily,Mean wind speed at 10m,3 km
-Dynamical,Historical Reconstruction,monthly,Evapotranspiration,45 km
-Dynamical,Historical Reconstruction,monthly,Evapotranspiration,9 km
-Dynamical,Historical Reconstruction,monthly,Evapotranspiration,3 km
 Dynamical,Historical Reconstruction,monthly,Evaporation,45 km
 Dynamical,Historical Reconstruction,monthly,Evaporation,9 km
 Dynamical,Historical Reconstruction,monthly,Evaporation,3 km
@@ -1028,9 +873,6 @@ Dynamical,Historical Reconstruction,monthly,Liquid water path,3 km
 Dynamical,Historical Reconstruction,monthly,Longwave flux at the surface,45 km
 Dynamical,Historical Reconstruction,monthly,Longwave flux at the surface,9 km
 Dynamical,Historical Reconstruction,monthly,Longwave flux at the surface,3 km
-Dynamical,Historical Reconstruction,monthly,Precipitation (convective only),45 km
-Dynamical,Historical Reconstruction,monthly,Precipitation (convective only),9 km
-Dynamical,Historical Reconstruction,monthly,Precipitation (convective only),3 km
 Dynamical,Historical Reconstruction,monthly,Precipitation (total),45 km
 Dynamical,Historical Reconstruction,monthly,Precipitation (total),9 km
 Dynamical,Historical Reconstruction,monthly,Precipitation (total),3 km
@@ -1049,18 +891,9 @@ Dynamical,Historical Reconstruction,monthly,Specific humidity at 2m,3 km
 Dynamical,Historical Reconstruction,monthly,Relative humidity,45 km
 Dynamical,Historical Reconstruction,monthly,Relative humidity,9 km
 Dynamical,Historical Reconstruction,monthly,Relative humidity,3 km
-Dynamical,Historical Reconstruction,monthly,Surface runoff,45 km
-Dynamical,Historical Reconstruction,monthly,Surface runoff,9 km
-Dynamical,Historical Reconstruction,monthly,Surface runoff,3 km
 Dynamical,Historical Reconstruction,monthly,Sensible heat flux at the surface,45 km
 Dynamical,Historical Reconstruction,monthly,Sensible heat flux at the surface,9 km
 Dynamical,Historical Reconstruction,monthly,Sensible heat flux at the surface,3 km
-Dynamical,Historical Reconstruction,monthly,Snow water equivalent,45 km
-Dynamical,Historical Reconstruction,monthly,Snow water equivalent,9 km
-Dynamical,Historical Reconstruction,monthly,Snow water equivalent,3 km
-Dynamical,Historical Reconstruction,monthly,Subsurface runoff,45 km
-Dynamical,Historical Reconstruction,monthly,Subsurface runoff,9 km
-Dynamical,Historical Reconstruction,monthly,Subsurface runoff,3 km
 Dynamical,Historical Reconstruction,monthly,Instantaneous downwelling shortwave flux at bottom,45 km
 Dynamical,Historical Reconstruction,monthly,Instantaneous downwelling shortwave flux at bottom,9 km
 Dynamical,Historical Reconstruction,monthly,Instantaneous downwelling shortwave flux at bottom,3 km
@@ -1176,32 +1009,6 @@ Dynamical,SSP 5-8.5,hourly,Specific humidity at 2m,9 km
 Dynamical,Historical Reconstruction,hourly,Specific humidity at 2m,45 km
 Dynamical,Historical Reconstruction,hourly,Specific humidity at 2m,9 km
 Dynamical,Historical Reconstruction,hourly,Specific humidity at 2m,3 km
-Dynamical,Historical Climate,hourly,Fosberg fire weather index,45 km
-Dynamical,Historical Climate,hourly,Fosberg fire weather index,9 km
-Dynamical,Historical Climate,hourly,Fosberg fire weather index,3 km
-Dynamical,SSP 3-7.0,hourly,Fosberg fire weather index,45 km
-Dynamical,SSP 3-7.0,hourly,Fosberg fire weather index,9 km
-Dynamical,SSP 3-7.0,hourly,Fosberg fire weather index,3 km
-Dynamical,SSP 2-4.5,hourly,Fosberg fire weather index,45 km
-Dynamical,SSP 2-4.5,hourly,Fosberg fire weather index,9 km
-Dynamical,SSP 5-8.5,hourly,Fosberg fire weather index,45 km
-Dynamical,SSP 5-8.5,hourly,Fosberg fire weather index,9 km
-Dynamical,Historical Reconstruction,hourly,Fosberg fire weather index,45 km
-Dynamical,Historical Reconstruction,hourly,Fosberg fire weather index,9 km
-Dynamical,Historical Reconstruction,hourly,Fosberg fire weather index,3 km
-Dynamical,Historical Climate,daily,Effective Temperature,45 km
-Dynamical,Historical Climate,daily,Effective Temperature,9 km
-Dynamical,Historical Climate,daily,Effective Temperature,3 km
-Dynamical,SSP 2-4.5,daily,Effective Temperature,45 km
-Dynamical,SSP 2-4.5,daily,Effective Temperature,9 km
-Dynamical,SSP 3-7.0,daily,Effective Temperature,45 km
-Dynamical,SSP 3-7.0,daily,Effective Temperature,9 km
-Dynamical,SSP 3-7.0,daily,Effective Temperature,3 km
-Dynamical,SSP 5-8.5,daily,Effective Temperature,45 km
-Dynamical,SSP 5-8.5,daily,Effective Temperature,9 km
-Dynamical,Historical Reconstruction,daily,Effective Temperature,45 km
-Dynamical,Historical Reconstruction,daily,Effective Temperature,9 km
-Dynamical,Historical Reconstruction,daily,Effective Temperature,3 km
 Dynamical,Historical Climate,hourly,NOAA Heat Index,45 km
 Dynamical,Historical Climate,hourly,NOAA Heat Index,9 km
 Dynamical,Historical Climate,hourly,NOAA Heat Index,3 km
@@ -1215,3 +1022,16 @@ Dynamical,SSP 5-8.5,hourly,NOAA Heat Index,9 km
 Dynamical,Historical Reconstruction,hourly,NOAA Heat Index,45 km
 Dynamical,Historical Reconstruction,hourly,NOAA Heat Index,9 km
 Dynamical,Historical Reconstruction,hourly,NOAA Heat Index,3 km
+Dynamical,Historical Climate,daily,Effective Temperature,45 km
+Dynamical,Historical Climate,daily,Effective Temperature,9 km
+Dynamical,Historical Climate,daily,Effective Temperature,3 km
+Dynamical,SSP 2-4.5,daily,Effective Temperature,45 km
+Dynamical,SSP 2-4.5,daily,Effective Temperature,9 km
+Dynamical,SSP 3-7.0,daily,Effective Temperature,45 km
+Dynamical,SSP 3-7.0,daily,Effective Temperature,9 km
+Dynamical,SSP 3-7.0,daily,Effective Temperature,3 km
+Dynamical,SSP 5-8.5,daily,Effective Temperature,45 km
+Dynamical,SSP 5-8.5,daily,Effective Temperature,9 km
+Dynamical,Historical Reconstruction,daily,Effective Temperature,45 km
+Dynamical,Historical Reconstruction,daily,Effective Temperature,9 km
+Dynamical,Historical Reconstruction,daily,Effective Temperature,3 km

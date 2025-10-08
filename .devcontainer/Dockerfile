@@ -6,17 +6,17 @@ RUN conda install -y \
     conda-lock \
     && conda clean -tipy
 
-# Install dependencies from conda-lock file into notebook environment
+# Install dependencies from conda-lock file into base environment
 COPY conda-linux-64.lock conda-linux-64.lock
 RUN conda update --all --solver=classic -n base -c conda-forge conda && \
-    conda install -n notebook --file conda-linux-64.lock && \
+    conda install -n base --file conda-linux-64.lock && \
     conda clean -tipy
 
-# To use examples, add ipykernel and jupyterlab to notebook env
-RUN conda install -n notebook -c conda-forge ipykernel jupyterlab
+# To use examples, add ipykernel and jupyterlab to base env
+RUN conda install -n base -c conda-forge ipykernel jupyterlab
 
-# Install the repo using pip from the notebook environment
-RUN conda run -n notebook pip install https://github.com/cal-adapt/climakitae/archive/refs/tags/1.4.0.zip
+# Install the repo using pip from the base environment
+RUN conda run -n base pip install https://github.com/cal-adapt/climakitae/archive/refs/tags/1.4.0.zip
 
 # Keep container alive
 CMD ["tail", "-f", "/dev/null"]
